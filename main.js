@@ -27,7 +27,14 @@ function boton(button){
     button.classList.add('selected');
 }
 
-//Eventos a botones
+//Eventos
+document.addEventListener('DOMContentLoaded', function(){
+  contenido.innerHTML = `
+    <div class='h-screen flex flex-col justify-center items-center'>
+      <h1 class='text-7xl font-bold text-center'>Qfinder<br>Bienvenidos</h1>
+    </div>
+  `
+})
 boton1.addEventListener('click', function(e){
   contenido.innerHTML= perfilPaciente()
   boton(this)
