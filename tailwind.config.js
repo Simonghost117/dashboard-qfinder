@@ -3,7 +3,8 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{html,js}",
-    './main.js'
+    './main.js',
+    './views/*'
   ],
   theme: {
     extend: {
@@ -18,8 +19,13 @@ export default {
         "moradoOscuro": "#271E4A",
         "gris": "#A1A1A1",
         "rosaGris": "#9b9bb2",
+        "rosa": "#FF706F",
         "hoverBgEditar": "#878787",
-        "hoverBgGuardar": "#408dd5"
+        "hoverBgGuardar": "#408dd5",
+        "azulMarFondo": "#3F779B",
+        "rosaPastelOpac": "#CA79C6",
+        "FAFAFA": "#FAFAFA",
+        "7B7B7B": "#7B7B7B"
       },
       screens: {
         'mq1185': { 'raw': '(min-width: 1185px)' },

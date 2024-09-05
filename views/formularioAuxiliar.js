@@ -1,5 +1,6 @@
 export default function(){
     return `
+      <div class="min-h-[700px]">
         <!-- Encabezado -->
       <div class="flex justify-between items-center mb-8" >
         <div class="text-2xl font-bold">
@@ -92,6 +93,7 @@ export default function(){
         </form>
       </div>
     </div>
+  </div>
   </div>
   </div>
     `

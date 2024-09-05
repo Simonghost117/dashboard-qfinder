@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link rel="stylesheet" href="public/css/all.min.css">
     <link rel="stylesheet" href="public/style.css">
   </head>
   <!--<body class="bg-gradient-to-br from-azulTenueFuerte from-96% to-azulMasClaro bg-no-repeat min-h-screen flex relative">-->
-  <body class="bg-gradient-to-br from-azulTenueFuerte via-azulMasClaro to-azulMasClaro bg-no-repeat min-h-screen flex relative mq980:justify-end">
+  <body class="bg-gradient-to-br from-azulTenueFuerte via-azulMasClaro to-azulMasClaro bg-no-repeat min-h-screen flex relative mq980:justify-end items-center">
     <aside id="asideMenu" class="bg-white xl:bg-white60opac shadow-lg xl:shadow-none  col-span-1 py-8 pl-5 pr-5 text-center basis-auto fixed top-0 bottom-0 left-0 transition-all hidden xl:block xl:basis-[8%]">
       <div class="relative">
         <button id="btnDorp" class="hidden xl:block absolute right-[-35px] top-10 bg-white w-[30px] h-[30px] rounded-full hover:shadow-lg">
@@ -21,7 +22,10 @@
           </div>
           <p class="text-sm text-center font-semibold">Sarah Smith</p>
         </div>
-        <nav id="menu"  class="flex flex-col gap-y-6"  >
+        <nav id="menu"  class="flex flex-col gap-y-3">
+          <a href="#perfil_paciente" id="botonHome" class=" menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white" value="">
+            <img src="/images/dashboard-icon.png" />
+          </a>
           <a href="#perfil_paciente" id="boton1" class=" menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white" value="">
             <i class="fa-regular fa-circle-user"></i>
             <span class="text-link hidden text-base">Fuck Society 19</span>
@@ -68,9 +72,10 @@
     </aside>
     <div id="cntInformation" class="bg-white60opac basis-[100%] mt-8 mb-8 mr-0 ml-0 mq980:mr-12 mq980:ml-8 xl:ml-0 rounded-lg transition-all xl:basis-[88%]">
       <div id="container1">
-       
+        <!-- Aquí va el contenedor donde se va a colocar el contenido didacticamente -->
       </div>
     </div>  
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="module" src="main.js"></script>
 </html>
