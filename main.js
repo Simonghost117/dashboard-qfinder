@@ -63,6 +63,15 @@ function Home(){
           tension: useCurves ? 0.3 : 0,
           fill: false
         }]
+      },
+      options: {
+        responsive: true,
+        /*maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }*/
       }
     });
 
@@ -83,6 +92,15 @@ function Home(){
             'rgba(153, 102, 255, 0.2)'
           ],
         }]
+      },
+      options: {
+        responsive: true,
+        /*maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }*/
       }
     });
 }

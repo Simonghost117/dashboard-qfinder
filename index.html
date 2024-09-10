@@ -11,9 +11,9 @@
   </head>
   <!--<body class="bg-gradient-to-br from-azulTenueFuerte from-96% to-azulMasClaro bg-no-repeat min-h-screen flex relative">-->
   <body class="bg-gradient-to-br from-azulTenueFuerte via-azulMasClaro to-azulMasClaro bg-no-repeat min-h-screen flex relative mq980:justify-end items-center">
-    <aside id="asideMenu" class="bg-white xl:bg-white60opac shadow-lg xl:shadow-none  col-span-1 py-8 pl-5 pr-5 text-center basis-auto fixed top-0 bottom-0 left-0 transition-all hidden xl:block xl:basis-[8%]">
-      <div class="relative">
-        <button id="btnDorp" class="hidden xl:block absolute right-[-35px] top-10 bg-white w-[30px] h-[30px] rounded-full hover:shadow-lg">
+    <aside id="asideMenu" class="bg-white xl:bg-white60opac shadow-lg xl:shadow-none  col-span-1 text-center basis-auto fixed top-0 bottom-0 left-0 transition-all hidden xl:block xl:basis-[8%] z-10 h-full">
+      <div class="overflow-x-hidden overflow-y-scroll max-h-screen px-4 py-4">
+        <button id="btnDorp" class="hidden xl:block absolute right-[-15px] top-10 bg-white w-[30px] h-[30px] rounded-full hover:shadow-lg">
           <i class="fas fa-arrow-right iconArrow"></i>
         </button>
         <div class="avatar mb-10">
@@ -26,7 +26,7 @@
           <a href="#perfil_paciente" id="botonHome" class=" menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white" value="">
             <img src="/images/dashboard-icon.png" />
           </a>
-          <a href="#perfil_paciente" id="boton1" class=" menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white" value="">
+          <a href="#perfil_paciente" id="boton1" class=" linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white" value="">
             <i class="fa-regular fa-circle-user"></i>
             <span class="text-link hidden text-base">Fuck Society 19</span>
           </a>
@@ -34,37 +34,37 @@
             <i class="fa-solid fa-hands-holding-child"></i>
             <span class="text-link hidden text-base">Fuck Society 1</span>
           </a>
-          <a id="boton3" href="#" class=" menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <a id="boton3" href="#" class=" linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
             <i class="fa-solid fa-user-doctor"></i>
             <span class="text-link hidden text-base">Fuck Society 1</span>
           </a>
-          <a id="boton4" href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <a id="boton4" href="#" class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
             <i class="fa-regular fa-file-lines"></i>
             <span class="text-link hidden text-base">Fuck Society 1</span>
           </a>
-          <a id="boton5" href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <a id="boton5" href="#" class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
             <i class="fa-solid fa-barcode"></i>
             <span class="text-link hidden text-base">Fuck Society 1</span>
           </a>
-          <a onclick="sesion6(), boton(this)" id="boton6" href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <a onclick="sesion6(), boton(this)" id="boton6" href="#" class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
             <i class="fa-solid fa-qrcode"></i>
             <span class="text-link hidden text-base">Fuck Society 1</span>
           </a>
-          <a  onclick="sesion7(), boton(this)" id="boton7" href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <a  onclick="sesion7(), boton(this)" id="boton7" href="#" class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
             <i class="fa-regular fa-clock"></i>
             <span class="text-link hidden text-base">Fuck Society 1</span>
           </a>
-          <a onclick="sesion8(), boton(this)" id="boton8" href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <a onclick="sesion8(), boton(this)" id="boton8" href="#" class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
             <i class="fa-regular fa-comments"></i>
             <span class="text-link hidden text-base">Fuck Society 1</span>
           </a>
-          <a onclick="sesion9(), boton(this)" id="boton9" href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <a onclick="sesion9(), boton(this)" id="boton9" href="#" class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
             <i class="fa-solid fa-sliders"></i>
             <span class="text-link hidden text-base">Fuck Society 1</span>
           </a>
         </nav>
         <div class="mt-14">
-          <a onclick="sesion10(), boton(this)"  href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <a onclick="sesion10(), boton(this)"  href="#" class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
             <i class="fa-solid fa-power-off"></i>
           </a>
         </div>
@@ -78,4 +78,71 @@
   </body>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="module" src="main.js"></script>
+
+  <script>
+    const btnDorp = document.getElementById("btnDorp"),
+      asideMenu = document.getElementById("asideMenu"),
+      cntInformation = document.getElementById("cntInformation"),
+      linkMenu = document.querySelectorAll('.linkMenu')
+      textLinkMenu = document.querySelectorAll(".text-link"),
+      iconArrowMenu = document.querySelector('.iconArrow'),
+      btnMenuMobile = document.querySelector("#btnMenuMobile"),
+      btnBell = document.querySelector("#btnBell"),
+      notificationBox = document.querySelector("#notificationBox")
+
+    btnDorp.addEventListener("click", function(e) {
+      if(asideMenu.style.width == "13%"){
+        asideMenu.style.width = ""
+        cntInformation.style.flexBasis = ""
+        iconArrowMenu.classList.remove('fa-arrow-left')
+        iconArrowMenu.classList.add('fa-arrow-right')
+        if( document.querySelector("#contenedor-canvas1") ){
+          document.querySelector("#contenedor-canvas1").style.width="50%";
+          document.querySelector("#contenedor-canvas2").style.width="50%";
+        }
+        linkMenu.forEach(link => {
+          link.classList.add('w-[50px]', 'h-[50px]', 'grid')
+          link.classList.remove('flex-start', 'flex', 'p-3', 'gap-x-2')
+        })
+        textLinkMenu.forEach(link => {
+          link.classList.add('hidden')
+        })
+      }else{
+        asideMenu.style.width = "13%"
+        cntInformation.style.flexBasis = "82%"
+        iconArrowMenu.classList.remove('fa-arrow-right')
+        iconArrowMenu.classList.add('fa-arrow-left')
+        if( document.querySelector("#contenedor-canvas1") ){
+          document.querySelector("#contenedor-canvas1").style.width="48.5%";
+          document.querySelector("#contenedor-canvas2").style.width="48.5%";
+        }
+        textLinkMenu.forEach(link => {
+          link.classList.remove('hidden')
+        })
+        linkMenu.forEach(link => {
+          link.classList.add('flex-start', 'flex', 'p-3', 'gap-x-2')
+          link.classList.remove('w-[50px]', 'h-[50px]', 'grid')
+        })
+      }
+    })
+
+    btnMenuMobile.addEventListener("click", function(e){
+      e.preventDefault();
+      linkMenu.forEach(link => {
+        link.classList.add('flex-start', 'flex', 'p-3', 'gap-x-2')
+        link.classList.remove('w-[50px]', 'h-[50px]', 'grid')
+      })
+      textLinkMenu.forEach(link => {
+        link.classList.remove('hidden')
+        link.classList.add('flex', 'flex-start')
+      })
+      asideMenu.classList.toggle("hidden")
+    })
+
+    btnBell.addEventListener("mouseover", function(e){
+      e.preventDefault()
+      notificationBox.classList.toggle("scale-y-0")
+      //notificationBox.classList.add("scale-1")
+    })
+  </script>
 </html>
