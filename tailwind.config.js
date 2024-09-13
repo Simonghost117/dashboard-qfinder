@@ -2,6 +2,7 @@
 export default {
   content: [
     "./index.html",
+    "./ejemploMenuMQ.html",
     "./src/**/*.{html,js}",
     './main.js',
     './views/*'

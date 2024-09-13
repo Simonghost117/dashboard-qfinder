@@ -71,12 +71,31 @@
       </div>
     </aside>
     <div id="cntInformation" class="bg-white60opac basis-[100%] mt-8 mb-8 mr-0 ml-0 mq980:mr-12 mq980:ml-8 xl:ml-0 rounded-lg transition-all xl:basis-[88%]">
+      
       <div id="container1">
         <!-- Aquí va el contenedor donde se va a colocar el contenido didacticamente -->
       </div>
-    </div>  
+    </div>
+    
+
+    <div class="fixed bottom-0 right-5">
+      <div class="relative py-3 sm:max-w-xl mx-auto">
+        <nav x-data="{ open: false }">
+          <button class="w-14 h-14 relative focus:outline-none bg-azulCielo rounded-full" @click="open = !open" id="btnMenuMobile">
+            <div class="block w-5 absolute left-6 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+              <span  class="block absolute h-0.5 w-7 text-white bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+              <span  class="block absolute  h-0.5 w-5 text-white bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+              <span  class="block absolute  h-0.5 w-7 text-white bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+            </div>
+          </button>
+        </nav>
+      </div>
+    </div>
+    
   </body>
+  <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
   <script type="module" src="main.js"></script>
 
   <script>
@@ -88,7 +107,7 @@
       iconArrowMenu = document.querySelector('.iconArrow'),
       btnMenuMobile = document.querySelector("#btnMenuMobile"),
       btnBell = document.querySelector("#btnBell"),
-      notificationBox = document.querySelector("#notificationBox")
+      notificationBox = document.querySelector("#notificationBox");
 
     btnDorp.addEventListener("click", function(e) {
       if(asideMenu.style.width == "13%"){
@@ -139,10 +158,46 @@
       asideMenu.classList.toggle("hidden")
     })
 
-    btnBell.addEventListener("mouseover", function(e){
-      e.preventDefault()
-      notificationBox.classList.toggle("scale-y-0")
-      //notificationBox.classList.add("scale-1")
-    })
+
+    /*MediaQuery*/
+    function mqFunction(x) {
+      if (x.matches) { // If media query matches
+        document.body.style.display="block";
+        
+      } else {
+        //document.body.style.display="none";
+        asideMenu.style.width = ""
+        document.body.classList.remove("items-center")
+        iconArrowMenu.classList.remove('fa-arrow-left')
+        iconArrowMenu.classList.add('fa-arrow-right')
+        if( document.querySelector("#contenedor-canvas1") ){
+          document.querySelector("#contenedor-canvas1").style.width="50%";
+          document.querySelector("#contenedor-canvas2").style.width="50%";
+        }
+        linkMenu.forEach(link => {
+          link.classList.add('w-[50px]', 'h-[50px]', 'grid')
+          link.classList.remove('flex-start', 'flex', 'p-3', 'gap-x-2')
+        })
+        textLinkMenu.forEach(link => {
+          link.classList.add('hidden')
+        })
+      }
+    }
+
+    // Create a MediaQueryList object
+    var x = window.matchMedia("(max-width: 1280px)")
+
+    // Call listener function at run time
+    mqFunction(x);
+
+    // Attach listener function on state changes
+    x.addEventListener("change", function() {
+      mqFunction(x);
+    });
+    /*End MediaQuery*/
+
+
+
+    
   </script>
 </html>

@@ -11,9 +11,6 @@ export default function(){
               <a href="#" class="px-3 rounded-full bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center">
                 <i class="fa-regular fa-bell text-xl"></i>
               </a>
-              <a href="#" class="xl:hidden px-3 rounded-full bg-white shadow-[0_0_14px_2px_#D8D2FCA3] hover:shadow-[0_0_14px_2px_#46a6ff47] grid place-content-center" id="btnMenuMobile">
-                <i class="fa fa-bars text-xl"></i>
-              </a>
             </div>
           </div>
           <div class="flex gap-3 mb-5">

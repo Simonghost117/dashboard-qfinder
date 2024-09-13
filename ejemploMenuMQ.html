@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 2</title>
+    <link rel="stylesheet" href="public/css/all.min.css">
+    <link rel="stylesheet" href="public/style.css">
+</head>
+<body>
+    <div class="flex h-screen">
+        <!-- w-[100px] w-1/6 -->
+        <div id="aside" class="transition-all w-[100px] absolute md:relative  bottom-0 top-0 h-full bg-rose-400 p-2 -left-full md:left-0">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dignissimos labore saepe illo recusandae sit, quaerat dolor aspernatur facere vel impedit quisquam unde fugiat officia. Iusto minus temporibus voluptates asperiores.</p>
+            <button id="menuDesktop" class="bg-white w-[35px] h-[35px] rounded-full absolute top-10 -right-5 shadow-lg border border-gray-500 hidden md:block">
+                <i class="fa-solid fa-arrow-right text-xl" id="iconAsideDesktop"></i>
+            </button>
+        </div>
+        <!-- w-5/6  -->
+        <div id="contenedor" class="transition-all w-full h-full bg-gray-100 p-2">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque nulla iure reiciendis deleniti temporibus, quae expedita! Ratione natus est quia, accusantium nulla eum assumenda consectetur maiores sit sequi, ipsa placeat.</p>
+        </div>
+
+        <button id="menuMobile" class="bg-rose-800 w-[50px] h-[50px] rounded-full absolute bottom-5 right-5 shadow-lg border border-gray-500 block md:hidden">
+            <i class="fa-solid fa-bars text-2xl text-white"></i>
+        </button>
+    </div>
+</body>
+    <script>
+        const aside = document.getElementById("aside"),
+            contenedor = document.getElementById("contenedor"),
+            menuDesktop = document.getElementById("menuDesktop"),
+            menuMobile = document.getElementById("menuMobile"),
+            iconAsideDesktop = document.getElementById("iconAsideDesktop");
+
+        //Funciones que me realizan la acción del desplegar el menú en distintas formas de la pantalla
+        //Forma Movil
+        function myFn(x){
+            if(x.matches){
+                console.log("1")
+                hideMenuDesktop()
+            }else{
+                console.log("2")
+                hideMenuMobile()
+            }
+        }
+        function showMenuMobile(){
+            if(aside.classList.contains("w-full")){ //Si es igual a 100% es porque esta desplegado el menu
+                aside.classList.add("-left-full", "w-[100px]")
+                aside.classList.remove("right-full", "left-0", "w-full");
+            }else{ //De lo contrario esta encogido el menu
+                aside.classList.remove("-left-full", "w-[100px]")
+                aside.classList.add("right-full", "left-0", "w-full");
+            }
+        }
+        function hideMenuMobile(){
+            aside.classList.add("left-full", "w-[100px]")
+            aside.classList.remove("right-full", "left-0", "w-full");
+        }
+
+        //Forma Desktop
+        function showMenuDesktop(){
+            if(aside.classList.contains("w-[100px]")){ //Si el aside esta oculto
+                //Desplegando el Aside
+                aside.classList.remove("w-[100px]")
+                aside.classList.add("w-1/6")
+                contenedor.classList.remove("w-full")
+                contenedor.classList.add("w-5/6")
+                iconAsideDesktop.classList.remove("fa-arrow-right")
+                iconAsideDesktop.classList.add("fa-arrow-left")
+            }else{ //De lo contrario si esta desplegado
+                //Ocultando el Aside
+                aside.classList.add("w-[100px]")
+                aside.classList.remove("w-1/6")
+                contenedor.classList.add("w-full")
+                contenedor.classList.remove("w-5/6")
+                iconAsideDesktop.classList.remove("fa-arrow-left")
+                iconAsideDesktop.classList.add("fa-arrow-right")
+            }
+        }
+
+        function hideMenuDesktop(){
+            aside.classList.add("w-[100px]")
+            aside.classList.remove("w-1/6")
+            contenedor.classList.add("w-full")
+            contenedor.classList.remove("w-5/6")
+            iconAsideDesktop.classList.remove("fa-arrow-left")
+            iconAsideDesktop.classList.add("fa-arrow-right")
+        }
+        
+
+        //Listeners para los botones(version movile y desktop) que despliegan el menu
+        //Forma movil
+        menuMobile.addEventListener("click", showMenuMobile);
+        //Forma Desktop
+        menuDesktop.addEventListener("click", showMenuDesktop);
+
+        //Código de MediaQuery
+        // Creamos el objeto mediaquery que se encarga de establecer la medida a la que debe corresponder las pantallas
+        var x = window.matchMedia("(max-width: 768px)")
+
+        // Call listener function at run time
+        myFn(x);
+
+        // Attach listener function on state changes
+        x.addEventListener("change", function() {
+            myFn(x);
+        });
+    </script>
+</html>
