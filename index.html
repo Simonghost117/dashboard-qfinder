@@ -13,11 +13,11 @@
 <!--<body class="bg-gradient-to-br from-azulTenueFuerte from-96% to-azulMasClaro bg-no-repeat min-h-screen flex relative">-->
 
 <body
-  class="bg-gradient-to-br from-azulTenueFuerte via-azulMasClaro to-azulMasClaro bg-no-repeat min-h-screen flex relative mq980:justify-end items-center">
+  class="bg-gradient-to-br from-azulTenueFuerte via-azulMasClaro to-azulMasClaro bg-no-repeat min-h-screen flex flex-col relative mq980:justify-center items-center">
   <aside id="asideMenu"
     class="bg-white xl:bg-white60opac shadow-lg xl:shadow-none  col-span-1 py-8 pl-5 pr-5 text-center basis-auto fixed top-0 bottom-0 left-0 transition-all hidden xl:block xl:basis-[8%]">
     <div class="relative">
-      <button id="btnDorp"
+      <button id="btnDorp "
         class="hidden xl:block absolute right-[-35px] top-10 bg-white w-[30px] h-[30px] rounded-full hover:shadow-lg">
         <i class="fas fa-arrow-right iconArrow"></i>
       </button>
@@ -89,32 +89,50 @@
       </div>
     </div>
   </aside>
-  <div id="cntInformation"
-    class="bg-white60opac basis-[100%] mt-8 mb-8 mr-0 ml-0 mq980:mr-12 mq980:ml-8 xl:ml-0 rounded-lg transition-all xl:basis-[88%]">
-    <!-- <div id="container1">
-        Aquí va el contenedor donde se va a colocar el contenido didacticamente
-      </div>-->
-    <h1> Qfinder</h1>
-    <button>Perfil</button>
-    <button>Notificaciones</button>
-    <div>Registro Notas</div><button>Crear Nueva Nota</button>
-    <div><!-- este es el cuadro en donde van los registros de notas-->
-      <div>Buscar notas</div>
-      <button>filtrar</button>
-
-      <div>Nota 1</div>
-      <div>Nota 2</div>
-      <div>Nota 3</div>
-      <div>Nota 4</div>
-      <div>Nota 5</div>
-      <div>Nota 6</div>
-      <div>Nota 7</div>
-      <div>Nota 8</div>
-      <div>Nota 9</div>
-      <div>Nota 10</div>
-    </div>
-
-
+<div class="flex space-x-4 justify-end">
+  <button class="bg-white p-2 rounded-full shadow-md">
+    <i class="fas fa-user"></i>
+  </button>
+  <button class="bg-white p-2 rounded-full shadow-md">
+    <i class="fas fa-cog"></i>
+  </button>
+</div>
+<main class="flex flex-col items-center mt-10">
+  <h2 class="text-3xl font-bold text-gray-800 mb-6">
+    Registro de notas
+  </h2>
+  <div class="flex items-center mb-6">
+    <select class="p-2 rounded-md shadow-md">
+      <option>
+        Buscar notas
+      </option>
+    </select>
+    <button class="ml-2 bg-purple-500 text-white p-2 rounded-md shadow-md">
+      <i class="fas fa-filter">
+      </i>
+    </button>
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="bg-white p-4 rounded-md shadow-md text-center">
+      Nota 1</div>
+    <div class="bg-white p-4 rounded-md shadow-md text-center">
+      Nota 2</div>
+    <div class="bg-white p-4 rounded-md shadow-md text-center">
+      Nota 3</div>
+    <div class="bg-white p-4 rounded-md shadow-md text-center">
+      Nota 4 </div>
+    <div class="bg-white p-4 rounded-md shadow-md text-center">
+      Nota 5</div>
+    <div class="bg-white p-4 rounded-md shadow-md text-center">
+      Nota 6</div>
+    <div class="bg-white p-4 rounded-md shadow-md text-center">
+      Nota 7</div>
+    <div class="bg-white p-4 rounded-md shadow-md text-center">
+      Nota 8</div>
+    <div class="bg-white p-4 rounded-md shadow-md text-center">
+      Nota 9</div>
+    <div class="bg-white p-4 rounded-md shadow-md text-center">
+      Nota 10</div>
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
