@@ -1,13 +1,14 @@
 
 export default function(){
+  //https://www.youtube.com/watch?v=ZtopjfXhUZI
     return `
     <section class="px-10 py-8 basis-[100%] mt-8 mb-8 mr-0 ml-0 mq980:mr-12 mq980:ml-8 xl:ml-0 rounded-lg transition-all xl:basis-[88%]">
-      <div class="top flex space-x-12 items-center justify-between">
+      <div class="top flex md:space-x-12 items-center justify-between flex-wrap md:flex-nowrap flex-row-reverse md:flex-row gap-y-9 md:gap-y-0">
         <figure>
           <img src="/images/logo.png" alt="Logo de la Empresa">
         </figure>
 
-        <div class="bg-white py-4 px-5 rounded-lg shadow-[0_0_9px_0px_#17007329] flex justify-between items-center space-x-5">
+        <div class="bg-white py-4 px-5 rounded-lg shadow-[0_0_9px_0px_#17007329] flex justify-between items-center space-x-5 w-full md:w-auto">
           <figure>
             <img src="/images/abuelos.png" alt="Abuelos">
           </figure>
@@ -16,7 +17,7 @@ export default function(){
           <button class="bg-rosaPastelOpac p-1 px-7 py-1 text-white shadow-[0_0_14px_2px_#D8D2FCA3] rounded-3xl">Actualizar</button>
         </div>
 
-        <div class="flex gap-x-3">
+        <div class="flex gap-x-3 -order-1 md:order-2">
           <a href="#" class="px-3 rounded-full bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center">
             <i class="fa-regular fa-user text-xl"></i>
           </a>
@@ -28,8 +29,8 @@ export default function(){
 
       <h3 class="text-3xl md:text-4xl font-bold text-moradoOscuro mt-4">Panel</h3>
 
-      <div class="flex justify-between space-x-6 mt-8">
-        <div class="grid grid-cols-3 grid-rows-2 items-center bg-white rounded-full py-4 px-6 shadow-[0_0_14px_2px_#D8D2FCA3] flex-1">
+      <div class="flex justify-center xl:justify-between items-stretch flex-wrap xl:flex-nowrap space-x-2 space-y-2 xl:space-x-6 mt-8">
+        <div class="grid grid-cols-3 w-full md:w-[48.5%] grid-rows-2 items-center bg-white rounded-[40px] xl:rounded-full py-2 px-4 xl:py-4 xl:px-6 shadow-[0_0_14px_2px_#D8D2FCA3] xl:flex-1">
           <figure class="row-span-2 inline col-span-1">
             <img src="/images/hospitaly.png" alt="ilustracion de un hospital">
           </figure>
@@ -37,7 +38,7 @@ export default function(){
           <p class="font-bold text-moradoOscuro text-lg col-span-2">Servicios Blindados</p>
         </div>
 
-        <div class="grid grid-cols-3 grid-rows-2 items-center bg-white rounded-full py-4 px-6 shadow-[0_0_14px_2px_#D8D2FCA3] flex-1">
+        <div class="grid grid-cols-3 w-full md:w-[48.5%] grid-rows-2 items-center bg-white rounded-[40px] xl:rounded-full py-2 px-4 xl:py-4 xl:px-6 shadow-[0_0_14px_2px_#D8D2FCA3] xl:flex-1">
           <figure class="row-span-2 inline col-span-1">
             <img src="/images/secret.png" alt="ilustracion de un hospital">
           </figure>
@@ -45,7 +46,7 @@ export default function(){
           <p class="font-bold text-moradoOscuro text-lg col-span-2">Personal Activo</p>
         </div>
 
-        <div class="grid grid-cols-3 grid-rows-2 items-center bg-white rounded-full py-4 px-6 shadow-[0_0_14px_2px_#D8D2FCA3] flex-1">
+        <div class="grid grid-cols-3 w-full md:w-[48.5%] grid-rows-2 items-center bg-white rounded-[40px] xl:rounded-full py-2 px-4 xl:py-4 xl:px-6 shadow-[0_0_14px_2px_#D8D2FCA3] xl:flex-1">
           <figure class="row-span-2 inline col-span-1">
             <img src="/images/temperature.png" alt="ilustracion de un hospital">
           </figure>
@@ -53,7 +54,7 @@ export default function(){
           <p class="font-bold text-moradoOscuro text-lg col-span-2">Nuevos Pacientes Hoy</p>
         </div>
 
-        <div class="grid grid-cols-3 grid-rows-2 items-center bg-white rounded-full py-4 px-6 shadow-[0_0_14px_2px_#D8D2FCA3] flex-1">
+        <div class="grid grid-cols-3 w-full md:w-[48.5%] grid-rows-2 items-center bg-white rounded-[40px] xl:rounded-full py-2 px-4 xl:py-4 xl:px-6 shadow-[0_0_14px_2px_#D8D2FCA3] xl:flex-1">
           <figure class="row-span-2 inline col-span-1">
             <img src="/images/temperature.png" alt="ilustracion de un hospital">
           </figure>
@@ -63,22 +64,22 @@ export default function(){
       </div>
 
       <div class="mt-8 flex flex-wrap gap-y-6">
-        <div class="w-full flex gap-x-10">
+        <div class="w-full flex flex-wrap xl:flex-nowrap xl:gap-x-10 gap-y-5 xl:gap-y-0">
 
-          <div id="contenedor-canvas1" class="bg-white shadow-[0_0_5px_2px_#D8D2FCA3] rounded-3xl px-6 py-5 w-3/6">
+          <div id="contenedor-canvas1" class="bg-white shadow-[0_0_5px_2px_#D8D2FCA3] rounded-3xl px-6 py-5 w-full xl:w-3/6 ">
             <p class="font-bold text-moradoOscuro text-xl">Encuesta Familiar-Acudiente</p>
 
             <canvas id="graphic-line"></canvas>
           </div>
-          <div id="contenedor-canvas2" class="bg-white shadow-[0_0_5px_2px_#D8D2FCA3] rounded-3xl px-6 py-5 w-3/6">
+          <div id="contenedor-canvas2" class="bg-white shadow-[0_0_5px_2px_#D8D2FCA3] rounded-3xl px-6 py-5 w-full xl:w-3/6 ">
             <p class="font-bold text-moradoOscuro text-xl">Informe de Enfermedades Comunes</p>
 
             <canvas id="graphic-bar"></canvas>
           </div>
         </div>
-        <div class="w-full flex gap-x-10">
+        <div class="w-full flex flex-wrap xl:flex-nowrap xl:gap-x-10 gap-y-6 xl:gap-y-0">
 
-          <div class="bg-white shadow-[0_0_5px_2px_#D8D2FCA3] rounded-3xl px-6 py-5 w-4/6">
+          <div class="bg-white shadow-[0_0_5px_2px_#D8D2FCA3] rounded-3xl px-6 py-5 w-full xl:w-4/6">
             <p class="font-bold text-moradoOscuro text-xl mb-8">Turnos Reservados</p>
             
 
@@ -177,7 +178,7 @@ export default function(){
               </tbody>
             </table>
           </div>
-          <div class="bg-white shadow-[0_0_5px_2px_#D8D2FCA3] rounded-3xl px-6 py-5 w-2/6">
+          <div class="bg-white shadow-[0_0_5px_2px_#D8D2FCA3] rounded-3xl px-6 py-5 w-full xl:w-2/6">
             <p class="font-bold text-moradoOscuro text-xl mb-8">Personal</p>
 
             <table class="w-full">

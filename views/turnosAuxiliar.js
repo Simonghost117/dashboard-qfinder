@@ -34,7 +34,7 @@ export default function(){
               <i class='fas fa-filter text-white'></i>
             </button>
           </div>
-
+          <div class="relative overflow-x-auto">
           <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-moradoOscuro uppercase bg-azulMasClaro">
                 <tr>
@@ -443,6 +443,7 @@ export default function(){
             
             </tbody>
 
+          </table>
           </table>
 
           <div class="mt-8 flex justify-between items-center" id="footer-table">
