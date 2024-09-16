@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "qfinder",
+=======
+  "name": "configuraciones",
+>>>>>>> e7b7f95 (Agregando pagina de configuraciones.)
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,9 +13,16 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.6",
     "vite": "^5.3.4"
+=======
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.45",
+    "tailwindcss": "^3.4.10",
+    "vite": "^5.0.0"
+>>>>>>> e7b7f95 (Agregando pagina de configuraciones.)
   }
 }

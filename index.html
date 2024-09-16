@@ -1,76 +1,270 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <link rel="stylesheet" href="public/css/all.min.css">
-    <link rel="stylesheet" href="public/style.css">
-  </head>
-  <!--<body class="bg-gradient-to-br from-azulTenueFuerte from-96% to-azulMasClaro bg-no-repeat min-h-screen flex relative">-->
-  <body class="bg-gradient-to-br from-azulTenueFuerte via-azulMasClaro to-azulMasClaro bg-no-repeat min-h-screen flex relative mq980:justify-end">
-    <aside id="asideMenu" class="bg-white xl:bg-white60opac shadow-lg xl:shadow-none  col-span-1 py-8 pl-5 pr-5 text-center basis-auto fixed top-0 bottom-0 left-0 transition-all hidden xl:block xl:basis-[8%]">
-      <div class="relative">
-        <button id="btnDorp" class="hidden xl:block absolute right-[-35px] top-10 bg-white w-[30px] h-[30px] rounded-full hover:shadow-lg">
-          <i class="fas fa-arrow-right iconArrow"></i>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="public/css/all.min.css">
+  <link rel="stylesheet" href="public/style.css">
+</head>
+<!--<body class="bg-gradient-to-br from-azulTenueFuerte from-96% to-azulMasClaro bg-no-repeat min-h-screen flex relative">-->
+
+<body
+  class="bg-gradient-to-br from-azulTenueFuerte via-azulMasClaro to-azulMasClaro bg-no-repeat min-h-screen flex relative mq980:justify-end items-center">
+  <aside id="asideMenu"
+    class="bg-white xl:bg-white60opac shadow-lg xl:shadow-none  col-span-1 text-center basis-auto fixed top-0 bottom-0 left-0 transition-all hidden xl:block xl:basis-[8%] z-10 h-full">
+    <div class="overflow-x-hidden overflow-y-scroll max-h-screen px-4 py-4">
+      <button id="btnDorp"
+        class="hidden xl:block absolute right-[-15px] top-10 bg-white w-[30px] h-[30px] rounded-full hover:shadow-lg">
+        <i class="fas fa-arrow-right iconArrow"></i>
+      </button>
+      <div class="avatar mb-10">
+        <div class="avatar-img bg-white rounded-full w-[64px] h-[64px] flex justify-center items-center mx-auto">
+          <img src="public/images/avatar.png" alt="Imagen de avatar" class="max-w-[50px]">
+        </div>
+        <p class="text-sm text-center font-semibold">Sarah Smith</p>
+      </div>
+      <nav id="menu" class="flex flex-col gap-y-3">
+        <a href="#perfil_paciente" id="botonHome"
+          class=" menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white"
+          value="">
+          <img src="/images/dashboard-icon.png" />
+        </a>
+        <a href="#perfil_paciente" id="boton1"
+          class=" linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white"
+          value="">
+          <i class="fa-regular fa-circle-user"></i>
+          <span class="text-link hidden text-base">Fuck Society 19</span>
+        </a>
+        <a id="boton2" href="#jujgugujgg"
+          class="menu-button linkMenu text-2xl text-gray-600 text-center mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white "
+          value="pagina">
+          <i class="fa-solid fa-hands-holding-child"></i>
+          <span class="text-link hidden text-base">Fuck Society 1</span>
+        </a>
+        <a id="boton3" href="#"
+          class=" linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <i class="fa-solid fa-user-doctor"></i>
+          <span class="text-link hidden text-base">Fuck Society 1</span>
+        </a>
+        <a id="boton4" href="#"
+          class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <i class="fa-regular fa-file-lines"></i>
+          <span class="text-link hidden text-base">Fuck Society 1</span>
+        </a>
+        <a id="boton5" href="#"
+          class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <i class="fa-solid fa-barcode"></i>
+          <span class="text-link hidden text-base">Fuck Society 1</span>
+        </a>
+        <a onclick="sesion6(), boton(this)" id="boton6" href="#"
+          class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <i class="fa-solid fa-qrcode"></i>
+          <span class="text-link hidden text-base">Fuck Society 1</span>
+        </a>
+        <a onclick="sesion7(), boton(this)" id="boton7" href="#"
+          class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <i class="fa-regular fa-clock"></i>
+          <span class="text-link hidden text-base">Fuck Society 1</span>
+        </a>
+        <a onclick="sesion8(), boton(this)" id="boton8" href="#"
+          class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <i class="fa-regular fa-comments"></i>
+          <span class="text-link hidden text-base">Fuck Society 1</span>
+        </a>
+        <a onclick="sesion9(), boton(this)" id="boton9" href="#"
+          class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <i class="fa-solid fa-sliders"></i>
+          <span class="text-link hidden text-base">Fuck Society 1</span>
+        </a>
+      </nav>
+      <div class="mt-14">
+        <a onclick="sesion10(), boton(this)" href="#"
+          class="linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <i class="fa-solid fa-power-off"></i>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+
+
+  <div id="cntInformation"
+    class="bg-white60opac basis-[100%] mt-8 mb-8 mr-0 ml-0 mq980:mr-12 mq980:ml-8 xl:ml-0 transition-all xl:basis-[88%] w-[1236px] h-[921px]">
+    <div id="container1">
+
+      <div class="my-[31px] mx-[49px]"><img src="public/images/QfindeR.png"></div>
+      <div class="mx-[57px] "><img src="public/images/Group 85.png" alt=""></div>
+
+      <div class="bg-white  w-[1600px] h-[690px] mx-auto my-[16px] rounded-[46px] flex flex-col" data-id="menu">
+
+
+
+        <button onclick="desplegable()"
+          class="bg-white border shadow-lg flex justify-between w-[1510px] h-[81px] items-center content-center rounded-[47px] p-10 m-auto mt-5">
+          <h1 class="text-[24px]">Notificaciones</h1>
+          <i class="fa-solid fa-caret-down text-3xl transition-transform" id=""></i>
         </button>
-        <div class="avatar mb-10">
-          <div class="avatar-img bg-white rounded-full w-[64px] h-[64px] flex justify-center items-center mx-auto">
-            <img src="/images/avatar.png" alt="Imagen de avatar" class="max-w-[50px]">
+
+        <div id="opciones" class="text-gray-950 flex-col hidden space-y-4 mt-4 p-4">
+
+          <a href="#"
+            class="bg-white border shadow-lg flex justify-between w-[1210px] h-[81px] items-center content-center rounded-[47px] p-10 ml-[330px]">
+            <h1 class="text-[24px]">Permitir Notificaciones</h1>
+            <label class="inline-flex items-center cursor-pointer">
+              <input type="checkbox" value="" class="sr-only peer">
+              <div
+                class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600">
+              </div>
+            </label>
+          </a>
+
+          <button onclick="desplegable2()"
+            class="bg-white border shadow-lg flex justify-between w-[1210px] h-[81px] items-center content-center rounded-[47px] p-10 ml-[330px]">
+            <h1 class="text-[24px]">Recibir Notificaciones</h1>
+            <i class="fa-solid fa-caret-down text-3xl transition-transform"></i>
+          </button>
+
+          <div id="opciones2" class="text-gray-950 flex-col hidden space-y-4 mt-4 p-4">
+
+            <a href="#"
+              class="bg-white border shadow-lg flex justify-between w-[1110px] h-[81px] items-center content-center rounded-[47px] p-10 ml-[410px]">
+              <h1 class="text-[24px]">Correo Electronico</h1>
+            </a>
+
+            <a href="#"
+              class="bg-white border shadow-lg flex justify-between w-[1110px] h-[81px] items-center content-center rounded-[47px] p-10 ml-[410px]">
+              <h1 class="text-[24px]">SMS</h1>
+            </a>
           </div>
-          <p class="text-sm text-center font-semibold">Sarah Smith</p>
         </div>
-        <nav id="menu"  class="flex flex-col gap-y-6"  >
-          <a onclick="sesion1(), boton(this)"  href="#perfil_paciente" id="boton1" class=" menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white" value="">
-            <i class="fa-regular fa-circle-user"></i>
-            <span class="text-link hidden text-base">Fuck Society 19</span>
-          </a>
-          <a onclick="sesion2(), boton(this)"  href="#jujgugujgg"  class="menu-button linkMenu text-2xl text-gray-600 text-center mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white " value="pagina">
-            <i class="fa-solid fa-hands-holding-child"></i>
-            <span class="text-link hidden text-base">Fuck Society 1</span>
-          </a>
-          <a onclick="sesion3(), boton(this)"  href="#" class=" menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
-            <i class="fa-solid fa-user-doctor"></i>
-            <span class="text-link hidden text-base">Fuck Society 1</span>
-          </a>
-          <a onclick="sesion4(), boton(this)" href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
-            <i class="fa-regular fa-file-lines"></i>
-            <span class="text-link hidden text-base">Fuck Society 1</span>
-          </a>
-          <a onclick="sesion5(), boton(this)"  href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
-            <i class="fa-solid fa-barcode"></i>
-            <span class="text-link hidden text-base">Fuck Society 1</span>
-          </a>
-          <a onclick="sesion6(), boton(this)"  href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
-            <i class="fa-solid fa-qrcode"></i>
-            <span class="text-link hidden text-base">Fuck Society 1</span>
-          </a>
-          <a  onclick="sesion7(), boton(this)"  href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
-            <i class="fa-regular fa-clock"></i>
-            <span class="text-link hidden text-base">Fuck Society 1</span>
-          </a>
-          <a onclick="sesion8(), boton(this)"  href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
-            <i class="fa-regular fa-comments"></i>
-            <span class="text-link hidden text-base">Fuck Society 1</span>
-          </a>
-          <a onclick="sesion9(), boton(this)"  href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
-            <i class="fa-solid fa-sliders"></i>
-            <span class="text-link hidden text-base">Fuck Society 1</span>
-          </a>
-        </nav>
-        <div class="mt-14">
-          <a onclick="sesion10(), boton(this)"  href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
-            <i class="fa-solid fa-power-off"></i>
-          </a>
-        </div>
+
+
+
+        <button onclick="privacidad()"
+          class="link_parent bg-white border shadow-lg flex justify-between w-[1510px] h-[81px] items-center content-center rounded-[47px] p-10 m-auto mt-1">
+          <h1 class="text-[24px]">privacidad</h1>
+          <i class="fa-solid fa-caret-down text-3xl transition-transform"></i>
+        </button>
+
+        <button onclick="accesibilidad()"
+          class="link_parent bg-white border shadow-lg flex justify-between w-[1510px] h-[81px] items-center content-center rounded-[47px] p-10 m-auto mt-1">
+          <h1 class="text-[24px]">Accesibilidad</h1>
+          <i class="fa-solid fa-caret-down text-3xl transition-transform"></i>
+        </button>
+
+        <button onclick="terminos()"
+          class="link_parent bg-white border shadow-lg flex justify-between w-[1510px] h-[81px] items-center content-center rounded-[47px] p-10 m-auto mt-1">
+          <h1 class="text-[24px]">Terminos y Condiciones</h1>
+          <i class="fa-solid fa-caret-down text-3xl transition-transform"></i>
+        </button>
+        <button onclick="ayuda()"
+          class="link_parent bg-white border shadow-lg flex justify-between w-[1510px] h-[81px] items-center content-center rounded-[47px] p-10 m-auto mt-1">
+          <h1 class="text-[24px]">Ayuda y Soporte</h1>
+          <i class="fa-solid fa-caret-down text-3xl transition-transform"></i>
+        </button>
+
+
       </div>
-    </aside>
-    <div id="cntInformation" class="bg-white60opac basis-[100%] mt-8 mb-8 mr-0 ml-0 mq980:mr-12 mq980:ml-8 xl:ml-0 rounded-lg transition-all xl:basis-[88%]">
-      <div id="container1">
-       
-      </div>
-    </div>  
-  </body>
-  <script typ src="main.js"></script>
+    </div>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="module" src="main.js"></script>
+
+<script>
+  const btnDorp = document.getElementById("btnDorp"),
+    asideMenu = document.getElementById("asideMenu"),
+    cntInformation = document.getElementById("cntInformation"),
+    linkMenu = document.querySelectorAll('.linkMenu')
+  textLinkMenu = document.querySelectorAll(".text-link"),
+    iconArrowMenu = document.querySelector('.iconArrow'),
+    btnMenuMobile = document.querySelector("#btnMenuMobile"),
+    btnBell = document.querySelector("#btnBell"),
+    notificationBox = document.querySelector("#notificationBox")
+
+  btnDorp.addEventListener("click", function (e) {
+    if (asideMenu.style.width == "13%") {
+      asideMenu.style.width = ""
+      cntInformation.style.flexBasis = ""
+      iconArrowMenu.classList.remove('fa-arrow-left')
+      iconArrowMenu.classList.add('fa-arrow-right')
+      if (document.querySelector("#contenedor-canvas1")) {
+        document.querySelector("#contenedor-canvas1").style.width = "50%";
+        document.querySelector("#contenedor-canvas2").style.width = "50%";
+      }
+      linkMenu.forEach(link => {
+        link.classList.add('w-[50px]', 'h-[50px]', 'grid')
+        link.classList.remove('flex-start', 'flex', 'p-3', 'gap-x-2')
+      })
+      textLinkMenu.forEach(link => {
+        link.classList.add('hidden')
+      })
+    } else {
+      asideMenu.style.width = "13%"
+      cntInformation.style.flexBasis = "82%"
+      iconArrowMenu.classList.remove('fa-arrow-right')
+      iconArrowMenu.classList.add('fa-arrow-left')
+      if (document.querySelector("#contenedor-canvas1")) {
+        document.querySelector("#contenedor-canvas1").style.width = "48.5%";
+        document.querySelector("#contenedor-canvas2").style.width = "48.5%";
+      }
+      textLinkMenu.forEach(link => {
+        link.classList.remove('hidden')
+      })
+      linkMenu.forEach(link => {
+        link.classList.add('flex-start', 'flex', 'p-3', 'gap-x-2')
+        link.classList.remove('w-[50px]', 'h-[50px]', 'grid')
+      })
+    }
+  })
+
+  btnMenuMobile.addEventListener("click", function (e) {
+    e.preventDefault();
+    linkMenu.forEach(link => {
+      link.classList.add('flex-start', 'flex', 'p-3', 'gap-x-2')
+      link.classList.remove('w-[50px]', 'h-[50px]', 'grid')
+    })
+    textLinkMenu.forEach(link => {
+      link.classList.remove('hidden')
+      link.classList.add('flex', 'flex-start')
+    })
+    asideMenu.classList.toggle("hidden")
+  })
+
+  btnBell.addEventListener("mouseover", function (e) {
+    e.preventDefault()
+    notificationBox.classList.toggle("scale-y-0")
+    //notificationBox.classList.add("scale-1")
+  })
+
+  function desplegable() {
+    const opciones = document.getElementById('opciones');
+    // Toggle the visibility of the options div
+    if (opciones.classList.contains('hidden')) {
+      opciones.classList.remove('hidden');
+    } else {
+      opciones.classList.add('hidden');
+    }
+  }
+
+  function desplegable2() {
+    const opciones2 = document.getElementById('opciones2');
+    // Toggle the visibility of the options div
+    if (opciones2.classList.contains('hidden')) {
+      opciones2.classList.remove('hidden');
+    } else {
+      opciones2.classList.add('hidden');
+    }
+  }
+</script>
+
 </html>
