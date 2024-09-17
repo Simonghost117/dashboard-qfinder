@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="public/style.css">
   </head>
   <!--<body class="bg-gradient-to-br from-azulTenueFuerte from-96% to-azulMasClaro bg-no-repeat min-h-screen flex relative">-->
-  <body class="bg-gradient-to-br from-azulTenueFuerte via-azulMasClaro to-azulMasClaro bg-no-repeat min-h-screen flex relative mq980:justify-end items-center">
-    <aside id="asideMenu" class="bg-white xl:bg-white60opac shadow-lg xl:shadow-none  col-span-1 text-center basis-auto fixed top-0 bottom-0 left-0 transition-all hidden xl:block xl:basis-[8%] z-10 h-full">
+  <!--<body class="bg-gradient-to-br from-azulTenueFuerte via-azulMasClaro to-azulMasClaro bg-no-repeat min-h-screen flex relative mq980:justify-end items-center">-->
+  <body class="bg-gradient-to-br from-azulTenueFuerte via-azulMasClaro to-azulMasClaro bg-no-repeat flex h-full min-h-screen">
+    <!--<aside id="aside" class="bg-white xl:bg-white60opac shadow-lg xl:shadow-none  col-span-1 text-center basis-auto fixed top-0 bottom-0 left-0 transition-all hidden xl:block xl:basis-[8%] z-10 h-full">-->
+    <aside id="aside" class="bg-white xl:bg-white60opac shadow-lg xl:shadow-none transition-all w-[100px] fixed xl:relative  bottom-0 top-0 h-auto min-h-screen z-10 xl:z-0 -left-full xl:left-0">
       <div class="overflow-x-hidden overflow-y-scroll max-h-screen px-4 py-4">
-        <button id="btnDorp" class="hidden xl:block absolute right-[-15px] top-10 bg-white w-[30px] h-[30px] rounded-full hover:shadow-lg">
-          <i class="fas fa-arrow-right iconArrow"></i>
+        <button id="menuDesktop" class="hidden xl:block absolute right-[-15px] top-10 bg-white w-[30px] h-[30px] rounded-full hover:shadow-lg">
+          <i class="fas fa-arrow-right iconArrow" id="iconAsideDesktop"></i>
         </button>
         <div class="avatar mb-10">
           <div class="avatar-img bg-white rounded-full w-[64px] h-[64px] flex justify-center items-center mx-auto">
@@ -70,7 +72,7 @@
         </div>
       </div>
     </aside>
-    <div id="cntInformation" class="bg-white60opac basis-[100%] mt-8 mb-8 mr-0 ml-0 mq980:mr-12 mq980:ml-8 xl:ml-0 rounded-lg transition-all xl:basis-[88%]">
+    <div id="contenedor" class="bg-white60opac basis-[100%] mt-8 mb-8 mr-0 ml-0 mq980:mr-12 mq980:ml-8 xl:ml-0 rounded-lg transition-all xl:basis-[88%]">
       
       <div id="container1">
         <!-- Aquí va el contenedor donde se va a colocar el contenido didacticamente -->
@@ -78,10 +80,10 @@
     </div>
     
 
-    <div class="fixed bottom-0 right-5">
+    <div class="fixed bottom-0 right-5 block xl:hidden z-20">
       <div class="relative py-3 sm:max-w-xl mx-auto">
         <nav x-data="{ open: false }">
-          <button class="w-14 h-14 relative focus:outline-none bg-azulCielo rounded-full" @click="open = !open" id="btnMenuMobile">
+          <button class="w-14 h-14 relative focus:outline-none bg-azulCielo rounded-full" @click="open = !open" id="menuMobile">
             <div class="block w-5 absolute left-6 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
               <span  class="block absolute h-0.5 w-7 text-white bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
               <span  class="block absolute  h-0.5 w-5 text-white bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
@@ -98,7 +100,88 @@
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
   <script type="module" src="main.js"></script>
 
-  <script>
+  <!--<script>
+    const aside = document.getElementById("aside"),
+            contenedor = document.getElementById("contenedor"),
+            menuDesktop = document.getElementById("menuDesktop"),
+            menuMobile = document.getElementById("menuMobile"),
+            iconAsideDesktop = document.getElementById("iconAsideDesktop");
+
+        //Funciones que me realizan la acción del desplegar el menú en distintas formas de la pantalla
+        //Forma Movil
+        function myFn(x){
+            if(x.matches){
+                console.log("1")
+                hideMenuDesktop()
+            }else{
+                console.log("2")
+                hideMenuMobile()
+            }
+        }
+        function showMenuMobile(){
+            if(aside.classList.contains("w-full")){ //Si es igual a 100% es porque esta desplegado el menu
+                aside.classList.add("-left-full", "w-[100px]")
+                aside.classList.remove("right-full", "left-0", "w-full");
+            }else{ //De lo contrario esta encogido el menu
+                aside.classList.remove("-left-full", "w-[100px]")
+                aside.classList.add("right-full", "left-0", "w-full");
+            }
+        }
+        function hideMenuMobile(){
+            aside.classList.add("-left-full", "w-[100px]")
+            aside.classList.remove("right-full", "left-0", "w-full");
+        }
+
+        //Forma Desktop
+        function showMenuDesktop(){
+            if(aside.classList.contains("w-[100px]")){ //Si el aside esta oculto
+                //Desplegando el Aside
+                aside.classList.remove("w-[100px]")
+                aside.classList.add("w-1/6")
+                contenedor.classList.remove("w-full")
+                contenedor.classList.add("w-5/6")
+                iconAsideDesktop.classList.remove("fa-arrow-right")
+                iconAsideDesktop.classList.add("fa-arrow-left")
+            }else{ //De lo contrario si esta desplegado
+                //Ocultando el Aside
+                aside.classList.add("w-[100px]")
+                aside.classList.remove("w-1/6")
+                contenedor.classList.add("w-full")
+                contenedor.classList.remove("w-5/6")
+                iconAsideDesktop.classList.remove("fa-arrow-left")
+                iconAsideDesktop.classList.add("fa-arrow-right")
+            }
+        }
+
+        function hideMenuDesktop(){
+            aside.classList.add("w-[100px]")
+            aside.classList.remove("w-1/6")
+            contenedor.classList.add("w-full")
+            contenedor.classList.remove("w-5/6")
+            iconAsideDesktop.classList.remove("fa-arrow-left")
+            iconAsideDesktop.classList.add("fa-arrow-right")
+        }
+        
+
+        //Listeners para los botones(version movile y desktop) que despliegan el menu
+        //Forma movil
+        menuMobile.addEventListener("click", showMenuMobile);
+        //Forma Desktop
+        menuDesktop.addEventListener("click", showMenuDesktop);
+
+        //Código de MediaQuery
+        // Creamos el objeto mediaquery que se encarga de establecer la medida a la que debe corresponder las pantallas
+        var x = window.matchMedia("(max-width: 768px)")
+
+        // Call listener function at run time
+        myFn(x);
+
+        // Attach listener function on state changes
+        x.addEventListener("change", function() {
+            myFn(x);
+        });
+  </script>-->
+  <!--<script>
     const btnDorp = document.getElementById("btnDorp"),
       asideMenu = document.getElementById("asideMenu"),
       cntInformation = document.getElementById("cntInformation"),
@@ -199,5 +282,5 @@
 
 
     
-  </script>
+  </script>-->
 </html>

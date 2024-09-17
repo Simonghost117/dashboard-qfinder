@@ -35,38 +35,38 @@ export default function(){
             </button>
           </div>
           <div class="relative overflow-x-auto">
-          <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <table class="tabla-responsive w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-moradoOscuro uppercase bg-azulMasClaro">
                 <tr>
                   <th></th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-2">
                     Fecha
                   </th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-2">
                     <a href="#">
                       Auxiliar
                       <i class="fas fa-arrow-down ml-3"></i>
                     </a>
                   </th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-2">
                     <a href="#">
                       Paciente
                       <i class="fas fa-arrow-down ml-3"></i>
                     </a>
                   </th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-2">
                     <a href="#">
                       Encargado/a
                       <i class="fas fa-arrow-down ml-3"></i>
                     </a>
                   </th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-2">
                     <a href="#">
                       Hora-inicio
                       <i class="fas fa-arrow-down ml-3"></i>
                     </a>
                   </th>
-                  <th scope="col" class="px-6 py-3">
+                  <th scope="col" class="px-6 py-2">
                     <a href="#">
                       Hora-Salida
                     </a>
@@ -83,25 +83,25 @@ export default function(){
                         <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-rosaPastelOpac bg-gray-100 border-gray-300 rounded focus:bg-rosaPastelOpac dark:focus:bg-rosaPastelOpac dark:bg-rosaPastelOpac focus:ring-2 dark:border-gray-600">
                     </div>
                   </th>
-                  <td class="px-6 py-4">
+                  <td title="Fecha" class="px-3 py-2">
                       <p class="text-moradoOscuro font-medium">12 Jun 2024</p>
                   </td>
-                  <th scope="row" class="px-6 py-4 font-medium text-azulMarFondo whitespace-nowrap ">
-                      Daniel Mendez
-                  </th>
-                  <td class="px-6 py-4">
-                      <p class="bg-rosa text-white text-[16px] text-center inline p-1 px-4 rounded">Will Robert</p>
+                  <td title="Auxiliar">
+                      <p class="px-3 py-2 font-medium text-azulMarFondo whitespace-nowrap">Daniel Mendez</p>
                   </td>
-                  <td class="px-6 py-4 text-moradoOscuro font-medium">
+                  <td title="Paciente" class="px-3 py-2">
+                      <p class="bg-rosa text-white text-[16px] text-center inline p-1 rounded">Will Robert</p>
+                  </td>
+                  <td title="Encargado/a" class="px-3 py-2 text-moradoOscuro font-medium">
                       Enfermero 1
                   </td>
-                  <td class="px-6 py-4 text-moradoOscuro font-medium">
+                  <td title="Hora/Inicio" class="px-3 py-2 text-moradoOscuro font-medium">
                       5 Am
                   </td>
-                  <td class="px-6 py-4 text-moradoOscuro font-medium">
+                  <td title="Hora/Salida" class="px-3 py-2 text-moradoOscuro font-medium">
                     2 Pm
                   </td>
-                  <td class="px-6 py-4 flex gap-x-5">
+                  <td class="px-3 py-2 flex gap-x-5">
                     <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#8BC34A] hover:text-white">
                       <i class="fa-solid fa-pen-to-square text-moradoOscuro"></i>
                     </a>
@@ -110,337 +110,6 @@ export default function(){
                     </a>
                   </td>
               </tr>
-              <tr class="bg-white border-b dark:border-azulMasClaro text-lg">
-                <th scope="row" class="px-6 py-4 font-medium">
-                  <div class="flex items-center">
-                      <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-rosaPastelOpac bg-gray-100 border-gray-300 rounded focus:bg-rosaPastelOpac dark:focus:bg-rosaPastelOpac dark:bg-rosaPastelOpac focus:ring-2 dark:border-gray-600">
-                  </div>
-                </th>
-                <td class="px-6 py-4">
-                    <p class="text-moradoOscuro font-medium">12 Jun 2024</p>
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-azulMarFondo whitespace-nowrap ">
-                    Daniel Mendez
-                </th>
-                <td class="px-6 py-4">
-                    <p class="bg-rosa text-white text-[16px] text-center inline p-1 px-4 rounded">Will Robert</p>
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    Enfermero 1
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    5 Am
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                  2 Pm
-                </td>
-                <td class="px-6 py-4 flex gap-x-5">
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#8BC34A] hover:text-white">
-                    <i class="fa-solid fa-pen-to-square text-moradoOscuro"></i>
-                  </a>
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#ff7878] hover:text-white">
-                    <i class="fa-solid fa-trash-can text-moradoOscuro"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr class="bg-white border-b dark:border-azulMasClaro text-lg">
-                <th scope="row" class="px-6 py-4 font-medium">
-                  <div class="flex items-center">
-                      <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-rosaPastelOpac bg-gray-100 border-gray-300 rounded focus:bg-rosaPastelOpac dark:focus:bg-rosaPastelOpac dark:bg-rosaPastelOpac focus:ring-2 dark:border-gray-600">
-                  </div>
-                </th>
-                <td class="px-6 py-4">
-                    <p class="text-moradoOscuro font-medium">12 Jun 2024</p>
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-azulMarFondo whitespace-nowrap ">
-                    Daniel Mendez
-                </th>
-                <td class="px-6 py-4">
-                    <p class="bg-rosa text-white text-[16px] text-center inline p-1 px-4 rounded">Will Robert</p>
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    Enfermero 1
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    5 Am
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                  2 Pm
-                </td>
-                <td class="px-6 py-4 flex gap-x-5">
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#8BC34A] hover:text-white">
-                    <i class="fa-solid fa-pen-to-square text-moradoOscuro"></i>
-                  </a>
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#ff7878] hover:text-white">
-                    <i class="fa-solid fa-trash-can text-moradoOscuro"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr class="bg-white border-b dark:border-azulMasClaro text-lg">
-                <th scope="row" class="px-6 py-4 font-medium">
-                  <div class="flex items-center">
-                      <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-rosaPastelOpac bg-gray-100 border-gray-300 rounded focus:bg-rosaPastelOpac dark:focus:bg-rosaPastelOpac dark:bg-rosaPastelOpac focus:ring-2 dark:border-gray-600">
-                  </div>
-                </th>
-                <td class="px-6 py-4">
-                    <p class="text-moradoOscuro font-medium">12 Jun 2024</p>
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-azulMarFondo whitespace-nowrap ">
-                    Daniel Mendez
-                </th>
-                <td class="px-6 py-4">
-                    <p class="bg-rosa text-white text-[16px] text-center inline p-1 px-4 rounded">Will Robert</p>
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    Enfermero 1
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    5 Am
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                  2 Pm
-                </td>
-                <td class="px-6 py-4 flex gap-x-5">
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#8BC34A] hover:text-white">
-                    <i class="fa-solid fa-pen-to-square text-moradoOscuro"></i>
-                  </a>
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#ff7878] hover:text-white">
-                    <i class="fa-solid fa-trash-can text-moradoOscuro"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr class="bg-white border-b dark:border-azulMasClaro text-lg">
-                <th scope="row" class="px-6 py-4 font-medium">
-                  <div class="flex items-center">
-                      <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-rosaPastelOpac bg-gray-100 border-gray-300 rounded focus:bg-rosaPastelOpac dark:focus:bg-rosaPastelOpac dark:bg-rosaPastelOpac focus:ring-2 dark:border-gray-600">
-                  </div>
-                </th>
-                <td class="px-6 py-4">
-                    <p class="text-moradoOscuro font-medium">12 Jun 2024</p>
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-azulMarFondo whitespace-nowrap ">
-                    Daniel Mendez
-                </th>
-                <td class="px-6 py-4">
-                    <p class="bg-rosa text-white text-[16px] text-center inline p-1 px-4 rounded">Will Robert</p>
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    Enfermero 1
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    5 Am
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                  2 Pm
-                </td>
-                <td class="px-6 py-4 flex gap-x-5">
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#8BC34A] hover:text-white">
-                    <i class="fa-solid fa-pen-to-square text-moradoOscuro"></i>
-                  </a>
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#ff7878] hover:text-white">
-                    <i class="fa-solid fa-trash-can text-moradoOscuro"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr class="bg-white border-b dark:border-azulMasClaro text-lg">
-                <th scope="row" class="px-6 py-4 font-medium">
-                  <div class="flex items-center">
-                      <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-rosaPastelOpac bg-gray-100 border-gray-300 rounded focus:bg-rosaPastelOpac dark:focus:bg-rosaPastelOpac dark:bg-rosaPastelOpac focus:ring-2 dark:border-gray-600">
-                  </div>
-                </th>
-                <td class="px-6 py-4">
-                    <p class="text-moradoOscuro font-medium">12 Jun 2024</p>
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-azulMarFondo whitespace-nowrap ">
-                    Daniel Mendez
-                </th>
-                <td class="px-6 py-4">
-                    <p class="bg-rosa text-white text-[16px] text-center inline p-1 px-4 rounded">Will Robert</p>
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    Enfermero 1
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    5 Am
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                  2 Pm
-                </td>
-                <td class="px-6 py-4 flex gap-x-5">
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#8BC34A] hover:text-white">
-                    <i class="fa-solid fa-pen-to-square text-moradoOscuro"></i>
-                  </a>
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#ff7878] hover:text-white">
-                    <i class="fa-solid fa-trash-can text-moradoOscuro"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr class="bg-white border-b dark:border-azulMasClaro text-lg">
-                <th scope="row" class="px-6 py-4 font-medium">
-                  <div class="flex items-center">
-                      <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-rosaPastelOpac bg-gray-100 border-gray-300 rounded focus:bg-rosaPastelOpac dark:focus:bg-rosaPastelOpac dark:bg-rosaPastelOpac focus:ring-2 dark:border-gray-600">
-                  </div>
-                </th>
-                <td class="px-6 py-4">
-                    <p class="text-moradoOscuro font-medium">12 Jun 2024</p>
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-azulMarFondo whitespace-nowrap ">
-                    Daniel Mendez
-                </th>
-                <td class="px-6 py-4">
-                    <p class="bg-rosa text-white text-[16px] text-center inline p-1 px-4 rounded">Will Robert</p>
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    Enfermero 1
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    5 Am
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                  2 Pm
-                </td>
-                <td class="px-6 py-4 flex gap-x-5">
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#8BC34A] hover:text-white">
-                    <i class="fa-solid fa-pen-to-square text-moradoOscuro"></i>
-                  </a>
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#ff7878] hover:text-white">
-                    <i class="fa-solid fa-trash-can text-moradoOscuro"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr class="bg-white border-b dark:border-azulMasClaro text-lg">
-                <th scope="row" class="px-6 py-4 font-medium">
-                  <div class="flex items-center">
-                      <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-rosaPastelOpac bg-gray-100 border-gray-300 rounded focus:bg-rosaPastelOpac dark:focus:bg-rosaPastelOpac dark:bg-rosaPastelOpac focus:ring-2 dark:border-gray-600">
-                  </div>
-                </th>
-                <td class="px-6 py-4">
-                    <p class="text-moradoOscuro font-medium">12 Jun 2024</p>
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-azulMarFondo whitespace-nowrap ">
-                    Daniel Mendez
-                </th>
-                <td class="px-6 py-4">
-                    <p class="bg-rosa text-white text-[16px] text-center inline p-1 px-4 rounded">Will Robert</p>
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    Enfermero 1
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    5 Am
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                  2 Pm
-                </td>
-                <td class="px-6 py-4 flex gap-x-5">
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#8BC34A] hover:text-white">
-                    <i class="fa-solid fa-pen-to-square text-moradoOscuro"></i>
-                  </a>
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#ff7878] hover:text-white">
-                    <i class="fa-solid fa-trash-can text-moradoOscuro"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr class="bg-white border-b dark:border-azulMasClaro text-lg">
-                <th scope="row" class="px-6 py-4 font-medium">
-                  <div class="flex items-center">
-                      <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-rosaPastelOpac bg-gray-100 border-gray-300 rounded focus:bg-rosaPastelOpac dark:focus:bg-rosaPastelOpac dark:bg-rosaPastelOpac focus:ring-2 dark:border-gray-600">
-                  </div>
-                </th>
-                <td class="px-6 py-4">
-                    <p class="text-moradoOscuro font-medium">12 Jun 2024</p>
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-azulMarFondo whitespace-nowrap ">
-                    Daniel Mendez
-                </th>
-                <td class="px-6 py-4">
-                    <p class="bg-rosa text-white text-[16px] text-center inline p-1 px-4 rounded">Will Robert</p>
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    Enfermero 1
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    5 Am
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                  2 Pm
-                </td>
-                <td class="px-6 py-4 flex gap-x-5">
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#8BC34A] hover:text-white">
-                    <i class="fa-solid fa-pen-to-square text-moradoOscuro"></i>
-                  </a>
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#ff7878] hover:text-white">
-                    <i class="fa-solid fa-trash-can text-moradoOscuro"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr class="bg-white border-b dark:border-azulMasClaro text-lg">
-                <th scope="row" class="px-6 py-4 font-medium">
-                  <div class="flex items-center">
-                      <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-rosaPastelOpac bg-gray-100 border-gray-300 rounded focus:bg-rosaPastelOpac dark:focus:bg-rosaPastelOpac dark:bg-rosaPastelOpac focus:ring-2 dark:border-gray-600">
-                  </div>
-                </th>
-                <td class="px-6 py-4">
-                    <p class="text-moradoOscuro font-medium">12 Jun 2024</p>
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-azulMarFondo whitespace-nowrap ">
-                    Daniel Mendez
-                </th>
-                <td class="px-6 py-4">
-                    <p class="bg-rosa text-white text-[16px] text-center inline p-1 px-4 rounded">Will Robert</p>
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    Enfermero 1
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    5 Am
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                  2 Pm
-                </td>
-                <td class="px-6 py-4 flex gap-x-5">
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#8BC34A] hover:text-white">
-                    <i class="fa-solid fa-pen-to-square text-moradoOscuro"></i>
-                  </a>
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#ff7878] hover:text-white">
-                    <i class="fa-solid fa-trash-can text-moradoOscuro"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr class="bg-white border-b dark:border-azulMasClaro text-lg">
-                <th scope="row" class="px-6 py-4 font-medium">
-                  <div class="flex items-center">
-                      <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-rosaPastelOpac bg-gray-100 border-gray-300 rounded focus:bg-rosaPastelOpac dark:focus:bg-rosaPastelOpac dark:bg-rosaPastelOpac focus:ring-2 dark:border-gray-600">
-                  </div>
-                </th>
-                <td class="px-6 py-4">
-                    <p class="text-moradoOscuro font-medium">12 Jun 2024</p>
-                </td>
-                <th scope="row" class="px-6 py-4 font-medium text-azulMarFondo whitespace-nowrap ">
-                    Daniel Mendez
-                </th>
-                <td class="px-6 py-4">
-                    <p class="bg-rosa text-white text-[16px] text-center inline p-1 px-4 rounded">Will Robert</p>
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    Enfermero 1
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                    5 Am
-                </td>
-                <td class="px-6 py-4 text-moradoOscuro font-medium">
-                  2 Pm
-                </td>
-                <td class="px-6 py-4 flex gap-x-5">
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#8BC34A] hover:text-white">
-                    <i class="fa-solid fa-pen-to-square text-moradoOscuro"></i>
-                  </a>
-                  <a href="#" class="p-2 rounded-md bg-white shadow-[0_0_14px_2px_#D8D2FCA3] grid place-content-center transition-all hover:bg-[#ff7878] hover:text-white">
-                    <i class="fa-solid fa-trash-can text-moradoOscuro"></i>
-                  </a>
-                </td>
-              </tr>
-            
             </tbody>
 
           </table>
