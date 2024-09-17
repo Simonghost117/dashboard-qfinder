@@ -3,6 +3,8 @@ import formularioAuxiliar from "./views/formularioAuxiliar";
 import perfilPaciente from "./views/perfilPaciente";
 import turnosAuxiliar from "./views/turnosAuxiliar";
 import dashboardMain from "./views/dashboardMain";
+import pacientes from "./views/pacientes";
+import perfilAcudiente from "./views/perfilAcudiente";
 
 //variables constantes y locales
 const contenido = document.getElementById('container1');
@@ -97,9 +99,26 @@ boton1.addEventListener('click', function(e){
   boton(this)
 })
 boton2.addEventListener('click', function(e){
-  contenido.innerHTML= formularioAuxiliar()
+  e.preventDefault()
+  contenido.innerHTML= pacientes()
+
+  const botonPerfil = document.querySelector("#botonPerfil")
+
+  botonPerfil.addEventListener('click', function(e){
+    e.preventDefault()
+    contenido.innerHTML= perfilPaciente()
+
+    const acudiente = document.querySelector('#acudiente')
+
+    acudiente.addEventListener('click', function(e){
+      e.preventDefault()
+      console.log('jsubdwyb')
+      contenido.innerHTML= perfilAcudiente()})
+  })
   boton(this)
+  
 })
+  
 boton3.addEventListener('click', function(e){
   contenido.innerHTML = turnosAuxiliar()
   boton(this)

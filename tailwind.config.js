@@ -4,7 +4,8 @@ export default {
     "./index.html",
     "./src/**/*.{html,js}",
     './main.js',
-    './views/*'
+    './views/*',
+    "./"
   ],
   theme: {
     extend: {
