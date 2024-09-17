@@ -21,7 +21,9 @@ const aside = document.getElementById("aside"),
   contenedor = document.getElementById("contenedor"),
   menuDesktop = document.getElementById("menuDesktop"),
   menuMobile = document.getElementById("menuMobile"),
-  iconAsideDesktop = document.getElementById("iconAsideDesktop");
+  iconAsideDesktop = document.getElementById("iconAsideDesktop"),
+  linkMenu = document.querySelectorAll('.linkMenu'),
+  textLinkMenu = document.querySelectorAll(".text-link");
 
 
 //codigo de la logica
@@ -127,14 +129,36 @@ function showMenuMobile(){
   if(aside.classList.contains("w-full")){ //Si es igual a 100% es porque esta desplegado el menu
       aside.classList.add("-left-full", "w-[100px]")
       aside.classList.remove("right-full", "left-0", "w-full");
+      textLinkMenu.forEach(link => {
+        link.classList.add('hidden')
+      })
+      linkMenu.forEach(link => {
+        link.classList.remove('flex-start', 'flex', 'p-3', 'gap-x-2')
+        link.classList.add('w-[50px]', 'h-[50px]', 'grid')
+      })
   }else{ //De lo contrario esta encogido el menu
       aside.classList.remove("-left-full", "w-[100px]")
       aside.classList.add("right-full", "left-0", "w-full");
+      textLinkMenu.forEach(link => {
+        link.classList.remove('hidden')
+      })
+      linkMenu.forEach(link => {
+        link.classList.add('flex-start', 'flex', 'p-3', 'gap-x-2')
+        link.classList.remove('w-[50px]', 'h-[50px]', 'grid')
+      })
   }
 }
 function hideMenuMobile(){
   aside.classList.add("-left-full", "w-[100px]")
   aside.classList.remove("right-full", "left-0", "w-full");
+
+  textLinkMenu.forEach(link => {
+    link.classList.add('hidden')
+  })
+  linkMenu.forEach(link => {
+    link.classList.remove('flex-start', 'flex', 'p-3', 'gap-x-2')
+    link.classList.add('w-[50px]', 'h-[50px]', 'grid')
+  })
 }
 
 //Forma Desktop
@@ -147,6 +171,14 @@ function showMenuDesktop(){
       contenedor.classList.add("w-5/6")
       iconAsideDesktop.classList.remove("fa-arrow-right")
       iconAsideDesktop.classList.add("fa-arrow-left")
+
+      textLinkMenu.forEach(link => {
+        link.classList.remove('hidden')
+      })
+      linkMenu.forEach(link => {
+        link.classList.add('flex-start', 'flex', 'p-3', 'gap-x-2')
+        link.classList.remove('w-[50px]', 'h-[50px]', 'grid')
+      })
   }else{ //De lo contrario si esta desplegado
       //Ocultando el Aside
       aside.classList.add("w-[100px]")
@@ -155,6 +187,14 @@ function showMenuDesktop(){
       contenedor.classList.remove("w-5/6")
       iconAsideDesktop.classList.remove("fa-arrow-left")
       iconAsideDesktop.classList.add("fa-arrow-right")
+
+      textLinkMenu.forEach(link => {
+        link.classList.add('hidden')
+      })
+      linkMenu.forEach(link => {
+        link.classList.remove('flex-start', 'flex', 'p-3', 'gap-x-2')
+        link.classList.add('w-[50px]', 'h-[50px]', 'grid')
+      })
   }
 }
 
@@ -165,6 +205,13 @@ function hideMenuDesktop(){
   contenedor.classList.remove("w-5/6")
   iconAsideDesktop.classList.remove("fa-arrow-left")
   iconAsideDesktop.classList.add("fa-arrow-right")
+  textLinkMenu.forEach(link => {
+    link.classList.add('hidden')
+  })
+  linkMenu.forEach(link => {
+    link.classList.remove('flex-start', 'flex', 'p-3', 'gap-x-2')
+    link.classList.add('w-[50px]', 'h-[50px]', 'grid')
+  })
 }
 
 //Eventos
