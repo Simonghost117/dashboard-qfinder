@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+    font-family:"Kanit";
+    src: url(/public/tipografia/Kanit-Medium.ttf);
+}
+
+h1,h2,h3{
+    font-family: "Kanit";
+}
+
+body{
+    height: 1040px;
+}
+
+/* Ajustes generales de ambos menus para evitar el choque */
+#asideMenu {
+    transition: width 0.3s ease, left 0.3s ease; /* Animaciones más suaves */
+  }
+  
+  #asideMenu1 {
+    position: absolute; /* Para asegurarte de que no choque con el otro aside */
+    left: 180px; /* Ajusta según el diseño */
+    transition: left 0.3s ease; /* Desplazamiento suave */
+    
+  }
+  
+  #asideMenu.expanded {
+    width: 10%; /* Define un ancho mayor cuando esté desplegado */
+  }
+  
+  #asideMenu1.expanded {
+    left: 210px; /* Cambia el desplazamiento cuando el aside principal esté activo */
+  }
+  
+  /* Agregar margenes para evitar que el contenido de la nota choque */
+  .bg-white {
+    margin-left: 2px; /* Ajusta según el espacio necesario */
+  }
+  
+  input[type="date"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent; /* Hace el fondo transparente */
+  }
+  input[type="text"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent; /* Hace el fondo transparente */
+  }

@@ -1,14 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{html,js}",
-    './main.js',
-    './views/*'
-  ],
+  content: ["./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: {
+      colors:{
         "azulTenueFuerte": "#84B6F4",
         "azulClaro": "#C4DAFA",
         "azulMasClaro": "#E0E9F4",
@@ -25,15 +21,10 @@ export default {
         "azulMarFondo": "#3F779B",
         "rosaPastelOpac": "#CA79C6",
         "FAFAFA": "#FAFAFA",
-        "7B7B7B": "#7B7B7B"
-      },
-      screens: {
-        'mq1185': { 'raw': '(min-width: 1185px)' },
-        'mq1050': { 'raw': '(min-width: 1050px)' },
-        'mq980': { 'raw': '(min-width: 980px)' },
-        // => @media (min-height: 800px) { ... }
-      }
+        "7B7B7B": "#7B7B7B",
+        "azulito": "#EDF4FC"
     },
+  }
   },
   plugins: [],
 }

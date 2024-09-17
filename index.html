@@ -3,17 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link rel="stylesheet" href="public/css/all.min.css">
-    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="style.css"/>
   </head>
-  <!--<body class="bg-gradient-to-br from-azulTenueFuerte from-96% to-azulMasClaro bg-no-repeat min-h-screen flex relative">-->
   <body class="bg-gradient-to-br from-azulTenueFuerte via-azulMasClaro to-azulMasClaro bg-no-repeat min-h-screen flex relative mq980:justify-end items-center">
-    <aside id="asideMenu" class="bg-white xl:bg-white60opac shadow-lg xl:shadow-none  col-span-1 py-8 pl-5 pr-5 text-center basis-auto fixed top-0 bottom-0 left-0 transition-all hidden xl:block xl:basis-[8%]">
+    <aside id="asideMenu" class="bg-white xl:bg-white60opac shadow-lg xl:shadow-none  col-span-1 py-16 pl-4 pr-5 text-center basis-auto fixed bottom-0 left-0 transition-all hidden xl:block xl:basis-[10%] h-full">
       <div class="relative">
-        <button id="btnDorp" class="hidden xl:block absolute right-[-35px] top-10 bg-white w-[30px] h-[30px] rounded-full hover:shadow-lg">
+        <button id="btnDorp" class="hidden xl:block absolute right-[-35px]  bg-white w-[30px] h-[30px] rounded-full hover:shadow-lg">
           <i class="fas fa-arrow-right iconArrow"></i>
         </button>
         <div class="avatar mb-10">
@@ -62,20 +60,99 @@
             <i class="fa-solid fa-sliders"></i>
             <span class="text-link hidden text-base">Fuck Society 1</span>
           </a>
-        </nav>
-        <div class="mt-14">
-          <a onclick="sesion10(), boton(this)"  href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center hover:bg-white ">
+          <a onclick="sesion10(), boton(this)"  href="#" class="menu-button linkMenu text-2xl text-gray-600 mx-auto rounded-full hover:transition w-[50px] h-[50px] grid place-content-center mt-10 hover:bg-white ">
             <i class="fa-solid fa-power-off"></i>
           </a>
         </div>
-      </div>
-    </aside>
-    <div id="cntInformation" class="bg-white60opac basis-[100%] mt-8 mb-8 mr-0 ml-0 mq980:mr-12 mq980:ml-8 xl:ml-0 rounded-lg transition-all xl:basis-[88%]">
-      <div id="container1">
-        <!-- Aquí va el contenedor donde se va a colocar el contenido didacticamente -->
-      </div>
-    </div>  
+      </aside>
+    </nav>
+      <aside id="asideMenu1" class="bg-white xl:bg-white60opac transition-all xl:basis-[88%] absolute left-[170px] top-[70px] w-[1680px] h-[920px]">
+        <div class="text-moradoOscuro text-[48px] font-medium py-20 mx-16">Registro de notas
+          <div class="bg-white w-[1550px] h-[700px] mt-6 rounded-[47px]">
+            <div class="bg-azulito w-[900px] h-[48px] relative top-9 mx-9 rounded-[18px]">
+              <input type="text" placeholder="Nota..." class="text-[20px] absolute py-2 mx-6"></span>
+              <input type="date" class="text-[20px] absolute left-[720px] py-2 "></span>
+              <button id="btnEliminarNota" class="bg-rosaPastelOpac rounded-[10px] relative left-[1240px] w-[183px] h-[40px] text-[20px] bottom-[20px]">Eliminar esta nota</button>
+            </div>
+            <div id="contenedorNota" class="bg-white mt-[60px] w-[1458px] h-[561px] relative left-9 drop-shadow-md rounded-[8px]">
+              <textarea id="notaContenido" class="w-full h-full p-4 text-[30px]" placeholder="Escribe tu nota aquí..."></textarea>
+          </div>
+          </div>
+        </div>
+      </aside>
+      
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script type="module" src="main.js"></script>
+
+  <script>
+   document.addEventListener("DOMContentLoaded", function() {
+        // Seleccionamos los elementos por su ID
+        const btnEliminar = document.getElementById("btnEliminarNota");
+        let notaContainer = document.getElementById("contenedorNota");
+
+        // Función para eliminar y regenerar la nota automáticamente
+        btnEliminar.addEventListener("click", function() {
+            if (notaContainer) {
+                notaContainer.remove(); // Eliminamos el contenedor actual de la nota
+                alert("La nota ha sido eliminada.");
+                regenerarNota(); // Llamamos a la función para regenerar la nota
+            }
+        });
+
+        // Función para regenerar la nota automáticamente
+        function regenerarNota() {
+            const nuevaNota = document.createElement("div"); // Creamos un nuevo contenedor div
+            nuevaNota.id = "contenedorNota"; // Le damos el mismo ID que tenía antes
+            nuevaNota.classList.add("nota"); // Añadimos la misma clase
+            nuevaNota.classList.add("bg-white", "mt-[8px]", "w-[1458px]", "h-[550px]", "relative", "right-[px]", "drop-shadow-md", "rounded-[8px]");
+
+            // Insertamos el nuevo contenedor justo después del botón de eliminar
+            btnEliminar.insertAdjacentElement("afterend", nuevaNota);
+
+            // Añadimos el textarea con el placeholder correcto
+            nuevaNota.innerHTML = '<textarea class="w-[1480px] h-[550px] p-4 text-[30px] rounded-[8px]" placeholder="Escribe tu nota aquí..." id="notaTexto"></textarea>';
+
+            // Actualizamos la referencia de notaContainer para el nuevo contenedor
+            notaContainer = nuevaNota;
+        }
+    });
+
+    const btnDorp = document.getElementById("btnDorp"),
+      asideMenu = document.getElementById("asideMenu"),
+      asideMenu1 = document.getElementById("asideMenu1"),  // Identificamos el segundo aside
+      cntInformation = document.getElementById("cntInformation"),
+      linkMenu = document.querySelectorAll('.linkMenu'),
+      textLinkMenu = document.querySelectorAll(".text-link"),
+      iconArrowMenu = document.querySelector('.iconArrow');
+
+// Evento para desplegar el aside principal
+btnDorp.addEventListener("click", function(e) {
+  if (asideMenu.classList.contains('expanded')) {
+    asideMenu.classList.remove('expanded');
+    asideMenu1.classList.remove('expanded');  // El segundo aside vuelve a su lugar
+    cntInformation.style.flexBasis = "";
+    iconArrowMenu.classList.remove('fa-arrow-left');
+    iconArrowMenu.classList.add('fa-arrow-right');
+    linkMenu.forEach(link => {
+      link.classList.add('w-[50px]', 'h-[50px]', 'grid');
+      link.classList.remove('flex-start', 'flex', 'p-3', 'gap-x-2');
+    });
+    textLinkMenu.forEach(link => {
+      link.classList.add('hidden');
+    });
+  } else {
+    asideMenu.classList.add('expanded');
+    asideMenu1.classList.add('expanded');  // El aside1 se desplaza
+    cntInformation.style.flexBasis = "82%";
+    iconArrowMenu.classList.remove('fa-arrow-right');
+    iconArrowMenu.classList.add('fa-arrow-left');
+    textLinkMenu.forEach(link => {
+      link.classList.remove('hidden');
+    });
+    linkMenu.forEach(link => {
+      link.classList.add('flex-start', 'flex', 'p-3', 'gap-x-2');
+      link.classList.remove('w-[50px]', 'h-[50px]', 'grid');
+    });
+  }
+});
+  </script>
 </html>
