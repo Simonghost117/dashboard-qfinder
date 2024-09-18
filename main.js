@@ -5,6 +5,7 @@ import turnosAuxiliar from "./views/turnosAuxiliar";
 import dashboardMain from "./views/dashboardMain";
 import pacientes from "./views/pacientes";
 import perfilAcudiente from "./views/perfilAcudiente";
+import perfilAdmi from "./views/perfilAdmi";
 
 //variables constantes y locales
 const contenido = document.getElementById('container1');
@@ -95,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function(){
   
 })
 boton1.addEventListener('click', function(e){
-  contenido.innerHTML= perfilPaciente()
+  contenido.innerHTML= perfilAdmi()
   boton(this)
 })
 boton2.addEventListener('click', function(e){
