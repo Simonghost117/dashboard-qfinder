@@ -25,7 +25,8 @@ export default {
         "azulMarFondo": "#3F779B",
         "rosaPastelOpac": "#CA79C6",
         "FAFAFA": "#FAFAFA",
-        "7B7B7B": "#7B7B7B"
+        "7B7B7B": "#7B7B7B",
+        "Green": "#79CFA6"
       },
       screens: {
         'mq1185': { 'raw': '(min-width: 1185px)' },
