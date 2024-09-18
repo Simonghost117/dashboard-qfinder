@@ -1,6 +1,6 @@
 export default function(){
     return `
-        <div id="cntInformation" class="bg-white60opac basis-[100%] mt-8 mb-8 mr-0 ml-0 mq980:mr-12 mq980:ml-8 xl:ml-0 rounded-lg transition-all xl:basis-[88%]">
+       <div id="cntInformation" class="bg-white60opac basis-[100%] mt-8 mb-8 mr-0 ml-0 mq980:mr-12 mq980:ml-8 xl:ml-0 rounded-lg transition-all xl:basis-[88%]">
       <div class="">
         <section class="mx-5 py-7">
           <div class="flex flex-col md:flex-row justify-between mb-[50px] gap-y-5">
@@ -17,9 +17,12 @@ export default function(){
               </a>
             </div>
           </div>
-          <div class="flex gap-3 mb-5">
-            <i class="fa-solid fa-hands-holding-child text-3xl md:text-4xl"></i>
+          <div class="flex gap-3 mb-5 justify-between">
+            <div class="flex">
+              <i class="fa-solid fa-hands-holding-child text-3xl md:text-4xl"></i>
             <p class="text-3xl md:text-4xl font-bold">Perfil del Paciente</p>
+            </div>
+            <a href="#" id="acudiente" class="py-1 px-7 rounded-sm bg-azulCielo text-white transition-all hover:bg-hoverBgGuardar block text-center">ACUDIENTE</a>
           </div>
           <div class="bg-white rounded-md p-6">
               <div class="flex flex-col md:flex-row justify-between items-center mb-10">
