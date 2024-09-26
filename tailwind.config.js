@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./login.html",
     "./ejemploMenuMQ.html",
+    "./recoverPassword.html",
     "./src/**/*.{html,js}",
     './main.js',
     './views/*'
