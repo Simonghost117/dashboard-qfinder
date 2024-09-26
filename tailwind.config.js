@@ -2,6 +2,7 @@
 export default {
   content: [
     "./index.html",
+    "./login.html",
     "./ejemploMenuMQ.html",
     "./src/**/*.{html,js}",
     './main.js',
@@ -33,6 +34,9 @@ export default {
         'mq1050': { 'raw': '(min-width: 1050px)' },
         'mq980': { 'raw': '(min-width: 980px)' },
         // => @media (min-height: 800px) { ... }
+      },
+      backgroundImage: {
+        'cldescarga': 'url(/images/loginbg.png)'
       }
     },
   },
