@@ -7,6 +7,7 @@ import pacientes from "./views/pacientes";
 import perfilAcudiente from "./views/perfilAcudiente";
 import perfilAuxiliarq from "./views/perfilAuxiliar";
 import perfilAuxiliar from "./views/perfilAuxiliar";
+import registroPaciente from "./views/registroPaciente";
 //variables constantes y locales
 const contenido = document.getElementById('container1');
 
@@ -128,5 +129,9 @@ boton3.addEventListener('click', function(e){
 
 boton4.addEventListener("click", function(e) {
   contenido.innerHTML = perfilAuxiliar()
+  boton(this)
+})
+boton5.addEventListener("click", function(e) {
+  contenido.innerHTML = registroPaciente()
   boton(this)
 })
